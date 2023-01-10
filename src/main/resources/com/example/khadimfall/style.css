@@ -1,0 +1,12 @@
+.root{
+    -fx-background-image: url('auto1.jpg');
+    -fx-background-repeat: repeat;
+    -fx-background-position: center;
+    -fx-border-image-repeat: no-repeat;
+    -fx-background-size:cover;
+   
+}
+.root Button{
+    -fx-background-color:cyan;
+
+}

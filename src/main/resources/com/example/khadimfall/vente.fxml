@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.khadimfall.controllers.VenteController">
+   <children>
+      <Label layoutX="34.0" layoutY="58.0" text="Montant" />
+      <Label layoutX="34.0" layoutY="165.0" text="Date" />
+      <TextField fx:id="txtMontant" layoutX="34.0" layoutY="90.0" />
+      <DatePicker fx:id="txtDate" layoutX="22.0" layoutY="204.0" />
+      <Button layoutX="34.0" layoutY="322.0" mnemonicParsing="false" onAction="#ajouter" prefHeight="25.0" prefWidth="87.0" style="-fx-background-color: green;" text="Ajouter" textFill="#1a1b1a">
+         <font>
+            <Font size="16.0" />
+         </font></Button>
+      <TableView fx:id="venteTable" layoutX="226.0" layoutY="58.0" prefHeight="253.0" prefWidth="364.0" style="-fx-background-color: cyan;">
+        <columns>
+          <TableColumn fx:id="idColumn" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="montantColumn" prefWidth="130.0" text="Montant" />
+            <TableColumn fx:id="dateColumn" prefWidth="139.99993896484375" text="Date" />
+        </columns>
+      </TableView>
+      <Button layoutX="139.0" layoutY="322.0" mnemonicParsing="false" onAction="#modifier" prefHeight="25.0" prefWidth="87.0" style="-fx-background-color: yellow;" text="Modifier" textFill="#2d2d2c">
+         <font>
+            <Font size="16.0" />
+         </font></Button>
+      <Button layoutX="250.0" layoutY="322.0" mnemonicParsing="false" onAction="#supprimer" prefHeight="36.0" prefWidth="99.0" style="-fx-background-color: red;" text="Supprimer" textFill="#121111">
+         <font>
+            <Font size="16.0" />
+         </font></Button>
+      <Text fill="#1439dd" layoutX="132.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Espace d'enregistrement des Ventes" wrappingWidth="251.47000122070312">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

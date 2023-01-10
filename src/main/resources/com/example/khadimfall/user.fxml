@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="740.0" maxWidth="1063.0" prefHeight="642.0" prefWidth="787.0" style="-fx-background-repeat: none;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.khadimfall.controllers.UserController">
+    <children>
+        <Button alignment="CENTER" contentDisplay="CENTER" layoutX="127.0" layoutY="60.0" mnemonicParsing="false" onAction="#loadClient" opacity="0.95" prefHeight="65.0" prefWidth="482.0" style="-fx-border-radius: 70px; -fx-content-display: block; -fx-position-shape: center;" text="GESTION DES CLIENTS" textAlignment="CENTER" textFill="#0819d0">
+            <font>
+                <Font name="System Bold Italic" size="26.0" />
+            </font>
+        </Button>
+        <Button alignment="CENTER" contentDisplay="CENTER" layoutX="127.0" layoutY="258.0" mnemonicParsing="false" onAction="#loadVoiture" opacity="0.95" prefHeight="65.0" prefWidth="482.0" style="-fx-border-radius: 70px; -fx-content-display: block; -fx-position-shape: center;" text="GESTION DES VOITURES" textAlignment="CENTER" textFill="#0819d0">
+            <font>
+                <Font name="System Bold Italic" size="26.0" />
+            </font>
+        </Button>
+        <Button alignment="CENTER" contentDisplay="CENTER" layoutX="127.0" layoutY="420.0" mnemonicParsing="false" onAction="#loadVente" opacity="0.95" prefHeight="65.0" prefWidth="482.0" style="-fx-border-radius: 70px; -fx-content-display: block; -fx-position-shape: center;" text="GESTION DES VENTES DE VOITURE" textAlignment="CENTER" textFill="#0819d0">
+            <font>
+                <Font name="System Bold Italic" size="26.0" />
+            </font>
+        </Button>
+        <Label alignment="TOP_CENTER" layoutX="82.0" prefHeight="49.0" prefWidth="705.0" text="BIENVENUE DANS VOTRE ESPACE DE VENTE DE VOITURE" textAlignment="CENTER" textFill="#44fa07">
+            <font>
+                <Font name="System Bold" size="23.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

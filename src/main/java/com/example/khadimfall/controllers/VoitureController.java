@@ -194,6 +194,10 @@ public class VoitureController implements Initializable {
 
             alert.showAndWait();
             tableVoiture();
+            txtmarque.setText("");
+            txtmodele.setText("");
+            txtkilometre.setText("");
+            txtannee.setDayCellFactory(null);
 
         }
         catch (SQLException ex)

@@ -5,38 +5,62 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="650.0" maxWidth="1063.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="517.0" prefWidth="482.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.khadimfall.controllers.ConnexionController">
+<AnchorPane maxHeight="650.0" maxWidth="1063.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="517.0" prefWidth="482.0" style="-fx-background-color: skyblue;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.khadimfall.controllers.ConnexionController">
    <children>
-      <VBox prefHeight="410.0" prefWidth="100.0" style="-fx-background-color: cyan;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0" />
-      <Text layoutX="161.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenue Dans La Page de Connexion" wrappingWidth="227.47003173828125">
+      <Text layoutX="207.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenue Dans La Page de Connexion" wrappingWidth="282.8033447265625">
          <font>
-            <Font name="System Bold" size="12.0" />
+            <Font name="Eras Demi ITC" size="13.0" />
          </font>
       </Text>
-      <TextField fx:id="txtlogin" layoutX="138.0" layoutY="104.0" promptText="Entrer votre login" />
-      <Label layoutX="138.0" layoutY="67.0" prefHeight="17.0" prefWidth="53.0" text="login" textFill="#2509d9">
+      <TextField fx:id="txtlogin" layoutX="273.0" layoutY="107.0" promptText="Entrer votre login" />
+      <Label layoutX="273.0" layoutY="70.0" prefHeight="17.0" prefWidth="53.0" text="login" textFill="#2509d9">
          <font>
             <Font name="Times New Roman" size="23.0" />
          </font>
       </Label>
-      <Label layoutX="138.0" layoutY="168.0" prefHeight="27.0" prefWidth="83.0" text="Password" textFill="#2509d9">
+      <Label layoutX="273.0" layoutY="171.0" prefHeight="27.0" prefWidth="83.0" text="Password" textFill="#2509d9">
          <font>
             <Font name="Times New Roman" size="17.0" />
          </font>
       </Label>
-      <Button layoutX="114.0" layoutY="345.0" mnemonicParsing="false" onAction="#connectButton" prefHeight="25.0" prefWidth="227.0" style="-fx-background-color: cyan;" text="Se Connecter">
+      <Button layoutX="273.0" layoutY="372.0" mnemonicParsing="false" onAction="#connectButton" prefHeight="46.0" prefWidth="165.0" style="-fx-background-color: cyan;" text="Se Connecter">
          <font>
             <Font name="Bell MT" size="24.0" />
          </font>
       </Button>
-      <PasswordField fx:id="txtpassword" layoutX="147.0" layoutY="211.0" promptText="password" />
-      <Label layoutX="118.0" layoutY="432.0" prefHeight="35.0" prefWidth="36.0" text="Etat" />
+      <PasswordField fx:id="txtpassword" layoutX="273.0" layoutY="215.0" prefHeight="25.0" prefWidth="149.0" promptText="password" />
       <Label fx:id="lbletat" layoutX="228.0" layoutY="432.0" prefHeight="17.0" prefWidth="90.0" />
-      <ComboBox fx:id="typeUser" layoutX="147.0" layoutY="284.0" prefWidth="150.0" promptText="Choisir Role" />
+      <ComboBox fx:id="typeUser" layoutX="273.0" layoutY="287.0" prefHeight="25.0" prefWidth="150.0" promptText="Choisir Role" />
+      <ImageView fitHeight="252.0" fitWidth="216.0" layoutX="-2.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@auto.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="263.0" fitWidth="202.0" layoutX="-2.0" layoutY="249.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@auto.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="34.0" layoutX="248.0" layoutY="107.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@user.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="21.0" layoutX="252.0" layoutY="215.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@password.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="34.0" layoutX="248.0" layoutY="287.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@role.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

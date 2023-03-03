@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="422.0" prefWidth="868.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.khadimfall.controllers.ClientController">
+<AnchorPane prefHeight="422.0" prefWidth="868.0" style="-fx-background-color: cyan;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.khadimfall.controllers.ClientController">
    <children>
       <Label layoutX="144.0" layoutY="9.0" prefHeight="48.0" prefWidth="400.0" text="Enregistrement Clients" textAlignment="CENTER">
          <font>

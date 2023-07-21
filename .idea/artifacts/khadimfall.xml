@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="khadimfall">
+    <output-path>$PROJECT_DIR$/out/artifacts/khadimfall</output-path>
+    <root id="root">
+      <element id="archive" name="khadimfall.jar">
+        <element id="module-output" name="khadimfall" />
+      </element>
+    </root>
+  </artifact>
+</component>

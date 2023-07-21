@@ -34,8 +34,6 @@ public class ConnexionController implements Initializable {
         ResultSet rs;
         String sql ="select * from user where log =? AND mdp=? AND role=?";
 
-
-
         try{
             pstm = connectDb.prepareStatement(sql);
             pstm.setString(1, txtlogin.getText().toString());
@@ -55,10 +53,14 @@ public class ConnexionController implements Initializable {
                 } if(typeUser.getValue().equals("secretaire")){
                     JOptionPane.showMessageDialog(null,"Connexion réuissie .Merci de cliquer sur ok pour aller dans votre espace");
                     Outils.load(event,"Bienvenu dans votre espace","/com/example/khadimfall/client.fxml");
-                    //lbletat.setText("Non conneté");
+
+                }if(typeUser.getValue().equals("vendeur")){
+                    JOptionPane.showMessageDialog(null,"Connexion réuissie .Merci de cliquer sur ok pour aller dans votre espace");
+                    Outils.load(event,"Bienvenu dans votre espace","/com/example/khadimfall/vente.fxml");
+
                 }
             }else {
-                lbletat.setText("Non conneté");
+                //lbletat.setText("Non conneté");
                 JOptionPane.showMessageDialog(null,"Merci de vérifier votre login et/ou mot de pass");
             }
             //lbletat.setText("conneté");
@@ -72,7 +74,7 @@ public class ConnexionController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        ObservableList<String> list = FXCollections.observableArrayList("admin","secretaire");
+        ObservableList<String> list = FXCollections.observableArrayList("admin","secretaire","vendeur");
         typeUser.setItems(list);
     }
 }

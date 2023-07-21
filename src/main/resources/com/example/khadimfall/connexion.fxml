@@ -62,5 +62,10 @@
             <Image url="@role.png" />
          </image>
       </ImageView>
+      <Label layoutX="216.0" layoutY="475.0" prefHeight="27.0" prefWidth="264.0" text="Copyrigth khadim@fall" textFill="#0b55e0">
+         <font>
+            <Font name="Elephant" size="19.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

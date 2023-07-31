@@ -8,6 +8,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.util.Callback;
 
 import java.net.URL;
 import java.sql.*;
@@ -72,18 +73,20 @@ public class VenteController implements Initializable {
 
     @FXML
     void modifier(ActionEvent event) {
-        String montant,date;
+        //String montant,date;
+        String montant;
+        LocalDate date;
 
         myIndex = venteTable.getSelectionModel().getSelectedIndex();
         id = Integer.parseInt(String.valueOf(venteTable.getItems().get(myIndex).getId()));
         montant=txtMontant.getText();
-        date = String.valueOf(txtDate.getValue());
+        date = txtDate.getValue();
 
         try
         {
             pst = con.prepareStatement("update vente set montant=?,date = ? where id = ? ");
             pst.setString(1,montant);
-            pst.setString(2, date);
+            pst.setDate(2, Date.valueOf(date));
             pst.setInt(3, id);
             pst.executeUpdate();
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -95,7 +98,7 @@ public class VenteController implements Initializable {
             alert.showAndWait();
             table();
             txtMontant.setText("");
-            txtDate.setDayCellFactory(null);
+            txtDate.setDayCellFactory((Callback<DatePicker, DateCell>) new DateCell());
         }
         catch (SQLException ex)
         {
@@ -122,8 +125,8 @@ public class VenteController implements Initializable {
 
             alert.showAndWait();
             table();
-            txtMontant.setText("");
-            txtDate.setDayCellFactory(null);
+            /*txtMontant.setText("");
+            txtDate.setDayCellFactory(null);*/
 
         }
         catch (SQLException ex)
@@ -174,6 +177,7 @@ public class VenteController implements Initializable {
 
                     txtMontant.setText(String.valueOf(venteTable.getItems().get(myIndex).getMontant()));
                     //txtDate.setDayCellFactory(datePicker -> venteTable.getItems().get(myIndex).getDate());
+                    txtDate.setDayCellFactory((Callback<DatePicker, DateCell>) Date.valueOf( venteTable.getItems().get(myIndex).getDate()));
 
                 }
             });

@@ -1,5 +1,6 @@
 package com.example.khadimfall.controllers;
 
+import com.example.khadimfall.entities.Client;
 import com.example.khadimfall.entities.Voiture;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -92,6 +93,7 @@ public class VoitureController implements Initializable {
 
     public void tableVoiture() {
         connect();
+        ObservableList<Voiture> voitures = FXCollections.observableArrayList();
 
         try
         {
@@ -194,10 +196,10 @@ public class VoitureController implements Initializable {
 
             alert.showAndWait();
             tableVoiture();
-            txtmarque.setText("");
+           /* txtmarque.setText("");
             txtmodele.setText("");
             txtkilometre.setText("");
-            txtannee.setDayCellFactory(null);
+            txtannee.setDayCellFactory(null);*/
 
         }
         catch (SQLException ex)
